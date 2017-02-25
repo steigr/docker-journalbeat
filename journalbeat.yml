@@ -1,0 +1,22 @@
+journalbeat:
+  seek_position: cursor
+  cursor_seek_fallback: tail
+  write_cursor_state: true
+  cursor_state_file: /data/journalbeat-cursor-state
+  cursor_flush_period: 5s
+  clean_field_names: true
+  convert_to_numbers: false
+  move_metadata_to_field: journal
+
+name: journalbeat
+
+output.elasticsearch:
+  enabled: true
+  hosts: ["${ELASTICSEARCH_HOST}"]
+  username: "${ELASTICSEARCH_USERNAME}"
+  password: "${ELASTICSEARCH_PASSWORD}"
+  template.name: "journalbeat"
+  index: "journalbeat-%{+yyyy.MM.dd}"
+  template.enabled: false
+
+logging.to_files: false

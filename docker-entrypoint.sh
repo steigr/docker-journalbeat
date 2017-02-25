@@ -1,9 +1,5 @@
 #!/bin/sh
+pidof tini </dev/null >/dev/null 2>&1 || exec tini "$0" "$@"
 
 cd /etc/journalbeat
-for template in journalbeat.template.json journalbeat.template-es2x.json; do
-	test -f "$template" \
-	|| echo '{}' | install -D -m 0644 -o root -g root /dev/stdin "$template"
-done
-
 exec journalbeat.real -e -c journalbeat.yml
