@@ -1,5 +1,9 @@
 # Journalbeat
 
+[![](https://images.microbadger.com/badges/image/steigr/journalbeat.svg)](http://microbadger.com/images/steigr/journalbeat "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/steigr/journalbeat.svg)](http://microbadger.com/images/steigr/journalbeat "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/commit/steigr/journalbeat.svg)](http://microbadger.com/images/steigr/journalbeat "Get your own commit badge on microbadger.com")
+
 This docker image can be used to stream from journald to elastic search.
 
 The image does not contain any special configuration.
