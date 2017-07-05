@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-ENV  JOURNALBEAT_VERSION=v5.1.2
+ENV  JOURNALBEAT_VERSION=v5.4.1
 
 RUN  export DEBIAN_FRONTEND=noninteractive \
  &&  apt-get update \
